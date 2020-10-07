@@ -1,0 +1,21 @@
+html{
+    background-color: black;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a{
+    color: red;
+    outline: auto;
+}
+
+a:hover{
+    color: white;
+}
+
+.title{
+    text-decoration: underline;
+}
