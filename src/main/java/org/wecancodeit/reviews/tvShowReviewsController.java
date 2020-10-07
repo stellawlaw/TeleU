@@ -9,11 +9,13 @@ import java.util.Collections;
 
 @Controller
 public class tvShowReviewsController {
-    @RequestMapping("sample-tvShowsReviews")
+    @RequestMapping("sample-tvShows-Reviews")
     public String showOneReview(Model model){
-        tvShowTitle sampletvShowTitle=new tvShowTitle("the Office", Collections.EMPTY_LIST);
-        tvShowReviews sampletvShowReviews=new tvShowReviews(sampletvShowTitle, "2005", "9", "office", "good");
-        model.addAttribute("tvShowsReviews", sampletvShowReviews);
+        tvShowTitle sampleTvShowTitle = new tvShowTitle("the Office", Collections.EMPTY_LIST);
+        tvShowReviews sampleTvShowReviews = new tvShowReviews(sampleTvShowTitle, "2005", "9", "office", "good");
+
+        model.addAttribute("tvShowReviews", sampleTvShowReviews);
+
         return "tvShowsReviews-template";
     }
 }
