@@ -1,4 +1,13 @@
 html{
+    background-color: rgb(21, 47, 197);
+    color: rgb(250, 244, 244);
+}
+.Comedypage{
+    background-color: aliceblue;
+    color: black;
+
+}
+.Horrorpage{
     background-color: black;
     color: white;
 }

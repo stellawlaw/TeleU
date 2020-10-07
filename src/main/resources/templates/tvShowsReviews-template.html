@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel = "stylesheet" href="./style.css">
+    <link rel = "stylesheet" href="./layout.css">
+    <title>Stranger Things Review</title>
+</head>
+<body>
+<main class="TvShow">
+    <header th:text="${tvShowReviews.tvShowsTitle.Title}" class="title"><h1>Stranger Things </h1></header>
+    <h2 >Show date</h2>
+    <p th:text="${tvShowReviews.showDate}" class="Show-date">July 15, 2016</p>
+    <h2 >Number of seasons</h2>
+    <p th:text="${tvShowReviews.numberOfSeasons}" class="Number-of-seasons">3 seasons- current</p>
+    <h2 >Description of show</h2>
+    <p th:text="${tvShowReviews.descriptionOfShow}" class="Description-of-show">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Fuga, ex cumque libero aspernatur ullam vitae, dicta aperiam laboriosam laborum dolor itaque,
+        ipsa eaque ipsam laudantium? Beatae mollitia aut perferendis porro!</p>
+    <h2 >Review </h2>
+    <p th:text="${tvShowReviews.review}" class="Review">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptas omnis ipsam vel voluptatem sapiente vero excepturi ipsum deserunt voluptate exercitationem,
+        obcaecati illum ipsa dignissimos quas consequatur aliquam eligendi cupiditate commodi.</p>
+    <a href="./Bad.html">#bad</a>
+    <a href="./index.html">Home</a>
+</main>
+</body>
+</html>
