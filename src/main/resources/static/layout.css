@@ -31,8 +31,8 @@ body{
     padding: 50px;
 
 }
-.TvShow p{
-width: 500px;
+.TvShowcontainer p{
+/* width: auto; */
 }
 a{
     display: block;
@@ -73,4 +73,17 @@ a{
 .home-link li{
     display: flex;
     justify-content: flex-end;
+}
+.TvShowcontainer {
+    text-align: center;
+    background-color: black;
+    
+    
+}
+.review-title{
+    display:flex;
+    justify-content: left;
+    justify-items: left;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
