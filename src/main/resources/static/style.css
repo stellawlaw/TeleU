@@ -1,6 +1,8 @@
-html{
-    /* color: rgb(250, 244, 244);     */
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+html{
+    color:var(--fourth-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 :root{
@@ -12,13 +14,43 @@ html{
 }
 
 .Comedypage{
-    background-color: aliceblue;
-    color: black;
+    background-image: url("./Images/comedy.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 
 }
+.the-office{
+    background-image: url("./Images/The-Office.jpg");
+    background-position:center;
+    background-size: 100vh;
+    
+}
+.PandR{
+    background-image: url("./Images/P&R.jpg");
+    background-position: center;
+    background-size:cover;
+}
 .Horrorpage{
-    background-color: black;
-    color: white;
+    background-image: url("./Images/horror.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 140vh;
+}
+.american-Horror-Story{
+    background-image: url("./Images/American_Horror_Story.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.strangerThings{
+    background-image: url("./Images/Stranger_Things_season_2.jpg");
+    background-position: top;
+    background-size: cover;
+}
+.main{
+    background-image: linear-gradient(rgba(255, 255, 255, 0) ,rgba(0, 0, 0, 0.692)),  url("./Images/curtian.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 ul {
@@ -26,20 +58,31 @@ ul {
 }
 
 a{
-    color: red;
     outline: auto;
 }
 
 a:hover{
-    color: white;
+    color: #2B2D42; 
 }
 
 .title{
     text-decoration: underline;
+    font-size: 30px;
+}
+.container{
+    color: var(--fourth-color);
+    background-color:  #8d99ae98;
+    height: 100vh;
+    max-width: auto;
+    border-radius: 25px;
+    
+}
+.genrecontainer{
+    color: var(--fourth-color);
+    height: 100vh;
+    max-width: auto;
+    border-radius: 25px;
 }
 
-body{
-    background-image: url("../Images/Movie-marker.jpg");
-    background-position: center;
-    background-size: cover;
-}
+
+

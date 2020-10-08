@@ -1,11 +1,11 @@
 *{
     margin: 0px;
-    padding:0 px;
+    padding:0px;
     box-sizing: border-box;
 
 }
 
-.title{
+.title h1{
     display:flex;
     justify-content: center;
     justify-items: center;
@@ -28,6 +28,8 @@ h2{
 }
 body{
     margin: 50px;
+    padding: 50px;
+
 }
 .TvShow p{
 width: 500px;
@@ -36,4 +38,39 @@ a{
     display: block;
     width: fit-content;
     margin-top: 20px;
+}
+.container ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 100px;
+    padding: 0px;
+}
+
+.GenreTitle img{
+    display: flex;
+    justify-content: center;
+}
+.container h1{
+    display: flex;
+    justify-content: center;
+    
+}
+.container h2{
+    display: flex;
+    justify-content: center;
+
+}
+.genrecontainer .movie-titles{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 100px;
+    padding: 0px;
+}
+.movie-titles img{
+    display: flex;
+    justify-content: center;
+}
+.home-link li{
+    display: flex;
+    justify-content: flex-end;
 }
