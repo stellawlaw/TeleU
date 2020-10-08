@@ -1,7 +1,16 @@
 html{
-    background-color: rgb(21, 47, 197);
-    color: rgb(250, 244, 244);
+    /* color: rgb(250, 244, 244);     */
+
 }
+
+:root{
+    --primary-color: #2B2D42;
+    --secondary-color: #D90429;
+    --tertiary-color: #8D99AE;
+    --fourth-color: #EDF2F4;
+    --fifth-color: #EF233C;
+}
+
 .Comedypage{
     background-color: aliceblue;
     color: black;
@@ -27,4 +36,10 @@ a:hover{
 
 .title{
     text-decoration: underline;
+}
+
+body{
+    background-image: url("../Images/Movie-marker.jpg");
+    background-position: center;
+    background-size: cover;
 }
