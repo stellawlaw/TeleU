@@ -3,7 +3,9 @@
 html{
     color:var(--fourth-color);
     font-family: 'Roboto', sans-serif;
+
 }
+
 
 :root{
     --primary-color: #2B2D42;
@@ -24,12 +26,13 @@ html{
     background-image: url("./Images/The-Office.jpg");
     background-position:center;
     background-size: 100vh;
-    
+
 }
+
 .PandR{
     background-image: url("./Images/P&R.jpg");
     background-position: center;
-    background-size:cover;
+    background-size:100vh;
 }
 .Horrorpage{
     background-image: url("./Images/horror.jpg");
@@ -40,12 +43,12 @@ html{
 .american-Horror-Story{
     background-image: url("./Images/American_Horror_Story.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: 100vh;
 }
 .strangerThings{
     background-image: url("./Images/Stranger_Things_season_2.jpg");
     background-position: top;
-    background-size: cover;
+    background-size: 100vh;
 }
 .main{
     background-image: linear-gradient(rgba(255, 255, 255, 0) ,rgba(0, 0, 0, 0.692)),  url("./Images/curtian.jpg");
@@ -58,8 +61,14 @@ ul {
 }
 
 a{
-    outline: auto;
+
+    color: var(--fourth-color);
 }
+
+.home-link{
+    color: var(--fourth-color);
+}
+
 
 a:hover{
     color: #2B2D42; 

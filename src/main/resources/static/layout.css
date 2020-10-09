@@ -70,20 +70,38 @@ a{
     display: flex;
     justify-content: center;
 }
-.home-link li{
+.home-link ul {
     display: flex;
     justify-content: flex-end;
+    justify-content: row;
+    border-radius: 15px;
+}
+
+.home-link li{
+    padding: 10px;
+    
+
 }
 .TvShowcontainer {
     text-align: center;
-    background-color: black;
-    
-    
+    background-color: rgba(0, 0, 0, 0.747);
+    border-radius: 25px;
+
 }
-.review-title{
+.review-title h1{
     display:flex;
     justify-content: left;
     justify-items: left;
     margin-top: 10px;
     margin-bottom: 40px;
 }
+
+.review-title{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    margin-bottom: 100px;
+}
+
+
