@@ -56,9 +56,7 @@ html{
     background-size: cover;
 }
 
-ul {
-    list-style-type: none;
-}
+
 
 a{
 
@@ -92,6 +90,46 @@ a:hover{
     max-width: auto;
     border-radius: 25px;
 }
+.Bad-Hashtag-page{
+   
+    background-image: url(./Images/tv-series.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+}
+.Bad-Hashtag-page body{
+    background-color: var(--primary-color);
+    height: 100vh;
+    opacity: .90;
 
-
-
+}
+.Good-Hashtag-page{
+    background-image: url(./Images/tv-series.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.Good-Hashtag-page body{
+    background-color: var(--primary-color);
+    height: 100vh;
+    opacity: .90;
+}
+.Bad-Hashtag-page .title{
+    text-align: center;
+}
+.Good-Hashtag-page .title{
+    text-align: center;
+}
+.Bad-Hashtag-page li  {
+    list-style-type: disc;
+    text-decoration: white;
+  }
+  .Good-Hashtag-page li  {
+    list-style-type: disc;
+    text-decoration: white;
+  }
+  
+ul {
+    list-style-type: none;
+}
