@@ -2,9 +2,7 @@
     margin: 0px;
     padding:0px;
     box-sizing: border-box;
-
 }
-
 .title h1{
     display:flex;
     justify-content: center;
@@ -12,18 +10,14 @@
     margin-top: 10px;
     margin-bottom: 20px;
 }
-
 .GenreTitles img{
-display: grid;
-
-height: 100%;
-width: 100%;
-
+    display: grid;
+    height: 100%;
+    width: 100%;
 }
 .GenreTitles img{
     display: flex;
     justify-content: center;
-    
 }
 .comedy {
     margin: 40px;
@@ -45,10 +39,6 @@ h2{
 body{
     margin: 50px;
     padding: 50px;
-
-}
-.TvShowcontainer p{
-/* width: auto; */
 }
 a{
     display: block;
@@ -59,19 +49,13 @@ a{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-
-
-
-
 .container h1{
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;   
 }
 .container h2{
     display: flex;
     justify-content: center;
-
 }
 .genrecontainer .movie-titles{
     display: grid;
@@ -89,17 +73,13 @@ a{
     justify-content: row;
     border-radius: 15px;
 }
-
 .home-link li{
     padding: 10px;
-    
-
 }
 .TvShowcontainer {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.747);
     border-radius: 25px;
-
 }
 .review-title h1{
     display:flex;
@@ -108,7 +88,6 @@ a{
     margin-top: 10px;
     margin-bottom: 40px;
 }
-
 .review-title{
     display: grid;
     grid-template-columns: 50% 50%;

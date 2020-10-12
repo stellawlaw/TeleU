@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tv-shows</title>
+    <link rel = "stylesheet" href="./style.css">
+    <link rel = "stylesheet" href="./layout.css">
+
+</head>
+<body class="main">
+<header class= "title"><h1>Tv Show Reviews</h1></header>
+<main class="container">
+    <h1>Click to see reviews!!!</h1>
+    <h2>Genres:</h2>
+
+    <ul class="GenreTitles">
+        <figure><li th:each="TvShowReviews: ${genre}" class="comedy"> <a th:text="${TvShowReviews.genre}" th:href="/comedy.html/${TvShowReviews.genre}" ><img src="./Images/comedy.jpg"
+                                                                  alt="comedy icon"></a> </li><figcaption>Comedy</figcaption></figure>
+
+        <figure><li th:each="TvShowReviews: ${genre}" class="Horror"> <a th:text="${TvShowReviews.genre}" th:href="/Horror.html/${TvShowReviews.genre}"><img src="./Images/horror.jpg"
+                                                                 alt="horror icon"></a> </li><figcaption>Horror</figcaption></figure>
+
+    </ul>
+</main>
+</body>
+</html>

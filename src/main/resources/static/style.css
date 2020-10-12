@@ -3,10 +3,7 @@
 html{
     color:var(--fourth-color);
     font-family: 'Roboto', sans-serif;
-
 }
-
-
 :root{
     --primary-color: #2B2D42;
     --secondary-color: #D90429;
@@ -14,21 +11,17 @@ html{
     --fourth-color: #EDF2F4;
     --fifth-color: #EF233C;
 }
-
 .Comedypage{
     background-image: url("./Images/comedy.jpg");
     background-position: center;
     background-size: cover;
     height: 100vh;
-
 }
 .the-office{
     background-image: url("./Images/The-Office.jpg");
     background-position:center;
     background-size: 100vh;
-
 }
-
 .PandR{
     background-image: url("./Images/P&R.jpg");
     background-position: center;
@@ -51,30 +44,29 @@ html{
     background-size: 100vh;
 }
 .main{
-    background-image: linear-gradient(rgba(255, 255, 255, 0) ,rgba(0, 0, 0, 0.692)),  url("./Images/curtian.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.089) ,rgba(0, 0, 0, 0.884)),  url("./Images/tv-series.jpg");
     background-position: center;
     background-size: cover;
+    height: auto;
 }
-
-
-
 a{
-
     color: var(--fourth-color);
 }
-
 .home-link{
     color: var(--fourth-color);
 }
-
-
 a:hover{
     color: #2B2D42; 
 }
-
+img:hover{
+    opacity: .7;
+}
+img{
+    outline: auto;
+}
 .title{
     text-decoration: underline;
-    font-size: 30px;
+    font-size: 40px;
 }
 .container{
     color: var(--fourth-color);
@@ -82,7 +74,6 @@ a:hover{
     height: 100vh;
     max-width: auto;
     border-radius: 25px;
-    
 }
 .genrecontainer{
     color: var(--fourth-color);
@@ -96,13 +87,11 @@ a:hover{
     background-position: center;
     background-size: cover;
     height: 100vh;
-    
 }
 .Bad-Hashtag-page body{
     background-color: var(--primary-color);
     height: 100vh;
     opacity: .90;
-
 }
 .Good-Hashtag-page{
     background-image: url(./Images/tv-series.jpg);
@@ -121,15 +110,16 @@ a:hover{
 .Good-Hashtag-page .title{
     text-align: center;
 }
-.Bad-Hashtag-page li  {
+.Bad-Hashtag-page main li  {
     list-style-type: disc;
+    font-size: 25px;
     text-decoration: white;
-  }
-  .Good-Hashtag-page li  {
+}
+.Good-Hashtag-page main li  {
     list-style-type: disc;
+    font-size: 25px;
     text-decoration: white;
-  }
-  
+}
 ul {
     list-style-type: none;
 }

@@ -11,17 +11,19 @@
 </head>
 <body>
 <main class="TvShow">
-    <header th:text="${tvShowReviews.title}" class="title"><h1>Stranger Things </h1></header>
+    <header th:text="${TvShowReviews.title}" class="title"><h1>Stranger Things </h1></header>
+    <h2>Genre</h2>
+    <p th:text="${TvShowReviews.genre}" class="Genre">Comedy</p>
     <h2 >Show date</h2>
-    <p th:text="${tvShowReviews.showDate}" class="Show-date">July 15, 2016</p>
+    <p th:text="${TvShowReviews.showDate}" class="Show-date">July 15, 2016</p>
     <h2 >Number of seasons</h2>
-    <p th:text="${tvShowReviews.numberOfSeasons}" class="Number-of-seasons">3 seasons- current</p>
+    <p th:text="${TvShowReviews.numberOfSeasons}" class="Number-of-seasons">3 seasons- current</p>
     <h2 >Description of show</h2>
-    <p th:text="${tvShowReviews.descriptionOfShow}" class="Description-of-show">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    <p th:text="${TvShowReviews.descriptionOfShow}" class="Description-of-show">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         Fuga, ex cumque libero aspernatur ullam vitae, dicta aperiam laboriosam laborum dolor itaque,
         ipsa eaque ipsam laudantium? Beatae mollitia aut perferendis porro!</p>
     <h2 >Review </h2>
-    <p th:text="${tvShowReviews.review}" class="Review">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    <p th:text="${TvShowReviews.review}" class="Review">Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Voluptas omnis ipsam vel voluptatem sapiente vero excepturi ipsum deserunt voluptate exercitationem,
         obcaecati illum ipsa dignissimos quas consequatur aliquam eligendi cupiditate commodi.</p>
     <a href="./Bad.html">#bad</a>
