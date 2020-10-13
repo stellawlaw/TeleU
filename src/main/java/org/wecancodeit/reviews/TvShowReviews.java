@@ -2,7 +2,7 @@ package org.wecancodeit.reviews;
 
 public class TvShowReviews {
 
-
+    private long id;
     private Genre genre;
     private String title;
     private String showDate;
@@ -11,14 +11,14 @@ public class TvShowReviews {
     private String review;
 
 
-
-    public TvShowReviews(Genre genre, String title, String showDate, String numberOfSeasons, String descriptionOfShow, String review) {
+    public TvShowReviews(Genre genre, String title, String showDate, String numberOfSeasons, String descriptionOfShow, String review, long id) {
         this.title = title;
         this.showDate = showDate;
         this.numberOfSeasons = numberOfSeasons;
         this.descriptionOfShow = descriptionOfShow;
         this.review = review;
         this.genre = genre;
+        this.id = id;
     }
     public Genre getGenre() {
         return genre;
@@ -44,5 +44,6 @@ public class TvShowReviews {
         return review;
     }
 
-
+    public long getId() { return id;
+    }
 }
