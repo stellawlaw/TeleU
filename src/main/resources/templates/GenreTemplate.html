@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comedy</title>
-    <link rel = "stylesheet" href="./style.css">
-    <link rel = "stylesheet" href="./layout.css">
+    <link rel = "stylesheet" href="/style.css">
+    <link rel = "stylesheet" href="/layout.css">
 </head>
 <body class="comedy-page">
 <nav class="home-link">
@@ -21,11 +21,12 @@
 <main class="genrecontainer">
     <ul class="movie-titles">
         <li th:each="review : ${genre.reviews}" class="genre-reviews">
-            <a th:text="${genre.name}" class="genre-reviews-link"
-               th:href="'/reviews/' +${review.id}"><img src="./Images/P&R.jpg"
-                                             height="800" width="500"alt="comedy icon"></a></li>
+            <a th:text="${genre.id}" class="genre-reviews-link"
+               th:href="'reviews/' +${review.id}"> </a></li>
 
     </ul>
 </main>
 </body>
 </html>
+<!--<img th:src="${genre.imageUrl}"-->
+<!--            height="800" width="500"alt="comedy icon">-->

@@ -9,9 +9,10 @@ public class TvShowReviews {
     private String numberOfSeasons;
     private String descriptionOfShow;
     private String review;
+    private String imageReviewUrl;
 
 
-    public TvShowReviews(Genre genre, String title, String showDate, String numberOfSeasons, String descriptionOfShow, String review, long id) {
+    public TvShowReviews(Genre genre, String title, String showDate, String numberOfSeasons, String descriptionOfShow, String review, long id, String imageReviewUrl) {
         this.title = title;
         this.showDate = showDate;
         this.numberOfSeasons = numberOfSeasons;
@@ -19,6 +20,7 @@ public class TvShowReviews {
         this.review = review;
         this.genre = genre;
         this.id = id;
+        this.imageReviewUrl = imageReviewUrl;
     }
     public Genre getGenre() {
         return genre;
@@ -45,5 +47,9 @@ public class TvShowReviews {
     }
 
     public long getId() { return id;
+    }
+
+    public String getImageReviewUrl() {
+        return imageReviewUrl;
     }
 }

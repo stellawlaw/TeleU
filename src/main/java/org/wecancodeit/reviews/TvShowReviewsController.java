@@ -8,10 +8,10 @@ import java.util.Collections;
 
 @Controller
 public class TvShowReviewsController {
-    @RequestMapping("sample-tvShows-Reviews")
+    @RequestMapping("reviews")
     public String showOneReview(Model model){
         Genre genre = new Genre("comedy", Collections.emptyList(), 1, "/Images/comedy.jpg" );
-        TvShowReviews sampleTvShowReviews = new TvShowReviews(genre, "the office", "2005", "9", "office", "good", 1);
+        TvShowReviews sampleTvShowReviews = new TvShowReviews(genre, "the office", "2005", "9", "office", "good", 1, "/Images/The-Office.jpg" );
 
         model.addAttribute("TvShowReviews", sampleTvShowReviews);
 

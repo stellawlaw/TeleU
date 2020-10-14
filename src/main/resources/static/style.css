@@ -12,39 +12,39 @@ html{
     --fifth-color: #EF233C;
 }
 .Comedypage{
-    background-image: url("./Images/comedy.jpg");
+    background-image: url("/Images/comedy.jpg");
     background-position: center;
     background-size: cover;
     height: 100vh;
 }
 .the-office{
-    background-image: url("./Images/The-Office.jpg");
+    background-image: url("/Images/The-Office.jpg");
     background-position:center;
     background-size: 100vh;
 }
 .PandR{
-    background-image: url("./Images/P&R.jpg");
+    background-image: url("/Images/P&R.jpg");
     background-position: center;
     background-size:100vh;
 }
 .Horrorpage{
-    background-image: url("./Images/horror.jpg");
+    background-image: url("/Images/horror.jpg");
     background-position: center;
     background-size: cover;
     height: 140vh;
 }
 .american-Horror-Story{
-    background-image: url("./Images/American_Horror_Story.jpg");
+    background-image: url("/Images/American_Horror_Story.jpg");
     background-position: center;
     background-size: 100vh;
 }
 .strangerThings{
-    background-image: url("./Images/Stranger_Things_season_2.jpg");
+    background-image: url("/Images/Stranger_Things_season_2.jpg");
     background-position: top;
     background-size: 100vh;
 }
 .main{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.089) ,rgba(0, 0, 0, 0.884)),  url("./Images/tv-series.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.089) ,rgba(0, 0, 0, 0.884)),  url("/Images/tv-series.jpg");
     background-position: center;
     background-size: cover;
     height: auto;
@@ -83,7 +83,7 @@ img{
 }
 .Bad-Hashtag-page{
    
-    background-image: url(./Images/tv-series.jpg);
+    background-image: url(/Images/tv-series.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -94,7 +94,7 @@ img{
     opacity: .90;
 }
 .Good-Hashtag-page{
-    background-image: url(./Images/tv-series.jpg);
+    background-image: url(/Images/tv-series.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tv-shows</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/layout.css">
 
 </head>
 <body class="main">
@@ -16,20 +16,14 @@
     <h2>Genres:</h2>
 
     <ul class="GenreTitles">
-<!--        <li th:each="genre: ${genres}" class="comedy">-->
-<!--            <a th:text="${genre.name}" th:href="'/genre/'+ ${genre.id}">-->
-<!--                </a> <figure>-->
-<!--                <img src="/Images/comedy.jpg"-->
-<!--                         alt="comedy icon">-->
+
 <figure th:each="genre:${genres}" class="genre">
-    <a th:href="'home/'+ ${genre.id}" class="genre-links">
+    <a th:href="'genre/'+ ${genre.id}" class="genre-links">
     <img th:src="${genre.imageUrl}"> </a>
           <strong>  <p th:text="${genre.name}"></p> </strong>
             </figure>
        </li>
 
-        <!--        <figure><li th:each="TvShowReviews: ${genres}" class="Horror"> <a th:text="${TvShowReviews.genres}" th:href="/Horror.html/${TvShowReviews.genre}"><img src="./Images/horror.jpg"-->
-        <!--                                                                 alt="horror icon"></a> </li><figcaption>Horror</figcaption></figure>-->
 
     </ul>
 </main>
