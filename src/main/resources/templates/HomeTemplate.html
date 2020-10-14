@@ -16,13 +16,15 @@
     <h2>Genres:</h2>
 
     <ul class="GenreTitles">
-        <li th:each="genre: ${genres}" class="comedy">
-            <a th:text="${genre.name}" th:href="'/comedy.html/'+ ${genre.id}">
-                </a> <figure>
-                <img src="/Images/comedy.jpg"
-                         alt="comedy icon">
-
-            <figcaption>Comedy</figcaption>
+<!--        <li th:each="genre: ${genres}" class="comedy">-->
+<!--            <a th:text="${genre.name}" th:href="'/genre/'+ ${genre.id}">-->
+<!--                </a> <figure>-->
+<!--                <img src="/Images/comedy.jpg"-->
+<!--                         alt="comedy icon">-->
+<figure th:each="genre:${genres}" class="genre">
+    <a th:href="'home/'+ ${genre.id}" class="genre-links">
+    <img th:src="${genre.imageUrl}"> </a>
+          <strong>  <p th:text="${genre.name}"></p> </strong>
             </figure>
        </li>
 

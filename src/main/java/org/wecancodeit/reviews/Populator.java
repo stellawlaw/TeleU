@@ -21,8 +21,8 @@ public void run(String...args) throws Exception{
 
     Collection<TvShowReviews> tvGenreReviews = new ArrayList<>();
 
-    Genre horror = new Genre("Horror", tvGenreReviews, 1L);
-    Genre comedy = new Genre("Comedy", Collections.EMPTY_LIST, 2L);
+    Genre horror = new Genre("Horror", tvGenreReviews, 1L, "/Images/horror.jpg" );
+    Genre comedy = new Genre("Comedy", Collections.EMPTY_LIST, 2L,"/Images/comedy.jpg" );
 
     tvGenreReviews.add(new TvShowReviews(horror, "American Horror Story", "January", "nine", "It's bs", "Three Stars", 1));
 

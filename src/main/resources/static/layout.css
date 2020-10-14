@@ -19,20 +19,14 @@
     display: flex;
     justify-content: center;
 }
-.comedy {
+.genre {
     margin: 40px;
 }
-.comedy img{
+.genre img{
     height: 360px;
     width: 500px;
 }
-.Horror{
-    margin:40px;
-}
-.Horror img{
-    height: 360px;
-    width: 500px;
-}
+
 h2{
     margin-top: 20px;
 }

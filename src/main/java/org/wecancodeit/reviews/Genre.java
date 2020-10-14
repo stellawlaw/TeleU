@@ -7,15 +7,17 @@ public class Genre {
     private long id;
     private String name;
     private Collection<TvShowReviews> reviews;
+    private String imageUrl;
 
     public Collection<TvShowReviews> getReviews() {
         return reviews;
     }
 
-    public Genre(String name, Collection<TvShowReviews> reviews, long id) {
+    public Genre(String name, Collection<TvShowReviews> reviews, long id, String imageUrl) {
         this.name = name;
         this.reviews = reviews;
         this.id = id;
+        this.imageUrl = imageUrl;
     }
 
     public String getName() {
@@ -28,5 +30,9 @@ public class Genre {
 
     public long getId() {
         return id;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 }
