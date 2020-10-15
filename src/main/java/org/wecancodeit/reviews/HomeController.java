@@ -15,7 +15,7 @@ public class HomeController {
         this.genreStorage = genreStorage;
     }
 
-    @RequestMapping({"", "/"})
+    @RequestMapping({"home", "/"})
     public String home(Model model){
         model.addAttribute("genres", genreStorage.retrieveAllGenres());
         return "HomeTemplate";

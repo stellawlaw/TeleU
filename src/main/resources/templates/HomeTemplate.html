@@ -17,14 +17,14 @@
 
     <ul class="GenreTitles">
 
-<figure th:each="genre:${genres}" class="genre">
-    <a th:href="'genre/'+ ${genre.id}" class="genre-links">
-    <img th:src="${genre.imageUrl}"> </a>
-          <strong>  <p th:text="${genre.name}"></p> </strong>
-            </figure>
-       </li>
-
-
+        <figure th:each="genre:${genres}" class="genre">
+             <a th:href="'genre/'+ ${genre.id}" class="genre-links">
+                <img th:src="${genre.imageUrl}">
+             </a>
+            <strong>
+                <p th:text="${genre.name}"></p>
+            </strong>
+        </figure>
     </ul>
 </main>
 </body>

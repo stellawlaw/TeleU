@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="tvshow-page"
+<html class="tvshow-page" th:style ="'background:url(' + ${TvShowReviews.imageReviewUrl} + ');'"
         xmlns="http://www.w3.org/1999/xhtml"
        xmlns:th="http://www.thymeleaf.org">
 
@@ -8,11 +8,21 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel = "stylesheet" href="/style.css">
     <link rel = "stylesheet" href="/layout.css">
-    <title>Stranger Things Review</title>
+    <title th:text="${TvShowReviews.title}" ></title>
 </head>
 <body>
-<main class="TvShowcontainer1">
-    <header th:text="${TvShowReviews.title}" class="title"><h1>Stranger Things </h1></header>
+<header class="review-title">
+    <h1 th:text="${TvShowReviews.title}" ></h1>
+    <nav class="home-link">
+        <ul>
+            <li><a th:href="'/home'"><h2>Home</h2></a></li>
+            <li><a th:href="'/genre/2'"><h2>Comedy</h2></a></li>
+            <li><a th:href="'/genre/1'"><h2>Horror</h2></a></li>
+        </ul>
+    </nav>
+</header>
+<main class="TvShowcontainer">
+    <h1 th:each="review:${TvShowReviews}" class="title"></h1>
     <h2>Genre</h2>
     <p th:text="${TvShowReviews.genre}" class="Genre">Comedy</p>
     <h2 >Show date</h2>
@@ -28,7 +38,7 @@
         Voluptas omnis ipsam vel voluptatem sapiente vero excepturi ipsum deserunt voluptate exercitationem,
         obcaecati illum ipsa dignissimos quas consequatur aliquam eligendi cupiditate commodi.</p>
     <a href="./Bad.html">#bad</a>
-    <a href="./index.html">Home</a>
+
 </main>
 </body>
 </html>
