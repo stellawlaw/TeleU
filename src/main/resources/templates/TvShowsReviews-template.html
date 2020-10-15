@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html class="tvshow-page"
+        xmlns="http://www.w3.org/1999/xhtml"
        xmlns:th="http://www.thymeleaf.org">
 
 <head>
@@ -10,7 +11,7 @@
     <title>Stranger Things Review</title>
 </head>
 <body>
-<main class="TvShow">
+<main class="TvShowcontainer">
     <header th:text="${TvShowReviews.title}" class="title"><h1>Stranger Things </h1></header>
     <h2>Genre</h2>
     <p th:text="${TvShowReviews.genre}" class="Genre">Comedy</p>

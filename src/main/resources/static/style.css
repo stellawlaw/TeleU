@@ -11,36 +11,15 @@ html{
     --fourth-color: #EDF2F4;
     --fifth-color: #EF233C;
 }
-.Comedypage{
+.genre-page{
     background-image: url("/Images/comedy.jpg");
     background-position: center;
     background-size: cover;
     height: 100vh;
 }
-.the-office{
+.tvshow-page{
     background-image: url("/Images/The-Office.jpg");
     background-position:center;
-    background-size: 100vh;
-}
-.PandR{
-    background-image: url("/Images/P&R.jpg");
-    background-position: center;
-    background-size:100vh;
-}
-.Horrorpage{
-    background-image: url("/Images/horror.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 140vh;
-}
-.american-Horror-Story{
-    background-image: url("/Images/American_Horror_Story.jpg");
-    background-position: center;
-    background-size: 100vh;
-}
-.strangerThings{
-    background-image: url("/Images/Stranger_Things_season_2.jpg");
-    background-position: top;
     background-size: 100vh;
 }
 .main{
@@ -122,4 +101,13 @@ img{
 }
 ul {
     list-style-type: none;
+}
+.review-title{
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+}
+.TvShowcontainer{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.747);
+    border-radius: 25px;
 }
