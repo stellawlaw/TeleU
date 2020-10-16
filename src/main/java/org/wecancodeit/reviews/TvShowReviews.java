@@ -17,9 +17,9 @@ public class TvShowReviews {
         this.showDate = showDate;
         this.numberOfSeasons = numberOfSeasons;
         this.descriptionOfShow = descriptionOfShow;
-        this.review = review;
+//        this.review = review;
         this.genre = genre;
-        this.id = id;
+//        this.id = id;
         this.imageReviewUrl = imageReviewUrl;
     }
     public Genre getGenre() {

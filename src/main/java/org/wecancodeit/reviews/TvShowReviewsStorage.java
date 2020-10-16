@@ -2,27 +2,25 @@ package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 @Service
 public class TvShowReviewsStorage {
-//    Map<Long,TvShowReviews>tvShowReviewsList = new HashMap<>();
-//    public TvShowReviewsStorage(){
-//
-//    }
-//    public void addTvShowReview(TvShowReviews oneReviewToAdd){
-//        tvShowReviewsList.put(oneReviewToAdd.getId(),oneReviewToAdd);
-//    }
-//    public Collection<TvShowReviews>retrieveAllReviews(){
-//        return tvShowReviewsList.values();
-//    }
-//    public TvShowReviews retrieveOneReviewById(Long id){
-//        return tvShowReviewsList.get(id);
-//    }
-    public TvShowReviews retrieveTvShowReviewsById(long id){
-        return new TvShowReviews(new Genre("Comedy", Collections.emptyList(), 2L, "/Images/comedy.jpg"),"", "", "tester", "", "", 2L, "");
+    private TvShowReviewsRepository tvShowReviewsRepo;
+
+    public TvShowReviewsStorage(TvShowReviewsRepository tvShowReviewsRepo){
+        this.tvShowReviewsRepo = tvShowReviewsRepo;
     }
+    public void addTvShowReview(TvShowReviews oneReviewToAdd){
+        tvShowReviewsRepo.save(oneReviewToAdd);
+    }
+    public Iterable<TvShowReviews>retrieveAllReviews(){
+        return tvShowReviewsRepo.findAll();
+    }
+    public TvShowReviews retrieveOneReviewById(Long id){
+        return tvShowReviewsRepo.findById(id).get();
+    }
+
+
+//    public TvShowReviews retrieveTvShowReviewsById(long id){
+//        return new TvShowReviews(new Genre("Comedy", "/Images/comedy.jpg"),"", "", "tester", "", "", 2L, "");
+//    }
 }

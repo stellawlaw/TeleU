@@ -13,10 +13,8 @@ public class Genre {
         return reviews;
     }
 
-    public Genre(String name, Collection<TvShowReviews> reviews, long id, String imageUrl) {
+    public Genre(String name, String imageUrl) {
         this.name = name;
-        this.reviews = reviews;
-        this.id = id;
         this.imageUrl = imageUrl;
     }
 

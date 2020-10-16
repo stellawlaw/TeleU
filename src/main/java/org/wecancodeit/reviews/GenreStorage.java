@@ -2,28 +2,25 @@ package org.wecancodeit.reviews;
 
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-
 @Service
 public class GenreStorage {
 
-    Map<Long, Genre> genrelist = new HashMap<>();
+    private GenreRepository genreRepo;
 
-    public GenreStorage() {
+    public GenreStorage(GenreRepository genreRepo) {
 
+        this.genreRepo = genreRepo;
     }
 
     public void addGenre (Genre genreToAdd) {
-        genrelist.put(genreToAdd.getId(), genreToAdd);
+        genreRepo.save(genreToAdd);
     }
-    public Collection<Genre> retrieveAllGenres() {
-            return genrelist.values();
+    public Iterable<Genre> retrieveAllGenres() {
+            return genreRepo.findAll();
         }
 
         public Genre retrieveGenreById(Long id){
-        return genrelist.get(id);
+        return genreRepo.findById(id).get();
         }
     }
 
