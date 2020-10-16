@@ -18,7 +18,7 @@ public class TvShowReviewsController {
 
     @RequestMapping("reviews/{id}")
     public String showOneReview(Model model, @PathVariable long id){
-        model.addAttribute("TvShowReviews", tvShowReviewsStorage.retrieveTvShowReviewsById(id));
+        model.addAttribute("TvShowReviews", tvShowReviewsStorage.retrieveOneReviewById(id));
         return "TvShowsReviews-template";
     }
 }
