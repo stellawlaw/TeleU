@@ -1,18 +1,17 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import java.util.Objects;
 
 @Entity
 public class TvShowReviews {
-@Id
-@GeneratedValue
+    @Id
+    @GeneratedValue
 
     private long id;
- @ManyToOne
+    @ManyToOne
     private Genre genre;
     private String title;
     private String showDate;
@@ -21,18 +20,19 @@ public class TvShowReviews {
     private String review;
     private String imageReviewUrl;
 
-    protected TvShowReviews(){}
+    protected TvShowReviews() {
+    }
 
-    public TvShowReviews(Genre genre, String title, String showDate, String numberOfSeasons, String descriptionOfShow, String review, long id, String imageReviewUrl) {
+    public TvShowReviews(Genre genre, String title, String showDate, String numberOfSeasons, String descriptionOfShow, String review, String imageReviewUrl) {
         this.title = title;
         this.showDate = showDate;
         this.numberOfSeasons = numberOfSeasons;
         this.descriptionOfShow = descriptionOfShow;
         this.review = review;
         this.genre = genre;
-        this.id = id;
         this.imageReviewUrl = imageReviewUrl;
     }
+
     public Genre getGenre() {
         return genre;
     }
@@ -57,7 +57,9 @@ public class TvShowReviews {
         return review;
     }
 
-    public long getId() { return id; }
+    public long getId() {
+        return id;
+    }
 
     public String getImageReviewUrl() {
         return imageReviewUrl;

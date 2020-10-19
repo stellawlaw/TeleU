@@ -1,16 +1,15 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.Collection;
-import java.util.Objects;
 
 @Entity
 public class Genre {
-@Id
-@GeneratedValue
+    @Id
+    @GeneratedValue
 
     private long id;
     private String name;
@@ -19,8 +18,9 @@ public class Genre {
     private String imageUrl;
 
 
-//, Collection<TvShowReviews> reviews
-    protected Genre(){}
+    //, Collection<TvShowReviews> reviews
+    protected Genre() {
+    }
 
     public Genre(String name, String imageUrl) {
         this.name = name;
@@ -32,10 +32,11 @@ public class Genre {
         return name;
     }
 
-    public Collection<TvShowReviews> getReview() {
+    public Collection<TvShowReviews> getReviews() {
         return reviews;
     }
-//    public Collection<TvShowReviews> getReviews() {
+
+    //    public Collection<TvShowReviews> getReviews() {
 //        return reviews;
 //    }
     public long getId() {
