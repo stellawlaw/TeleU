@@ -16,8 +16,8 @@ public class TvShowReviewsController {
         this.tvShowReviewsStorage = tvShowReviewsStorage;
     }
 
-    @RequestMapping("reviews/{id}")
-    public String showOneReview(Model model, @PathVariable long id){
+    @RequestMapping("{genre}/reviews/{id}")
+    public String showOneReview(Model model, @PathVariable long id, @PathVariable String genre){
         model.addAttribute("TvShowReviews", tvShowReviewsStorage.retrieveOneReviewById(id));
         return "TvShowsReviews-template";
     }
