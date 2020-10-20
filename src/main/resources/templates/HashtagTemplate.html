@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html class="hashtag-page"
+      xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tv-shows</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/layout.css">
-
+    <title th:text="${hashtags.name}" ></title>
+    <link rel = "stylesheet" href="/style.css">
+    <link rel = "stylesheet" href="/layout.css">
 </head>
-<body class="main">
+
+<body>
 <header class="review-title">
-    <h1 class="title">Tv Show Reviews</h1>
+    <h1 th:text="${hashtags.name}">Hashtags</h1>
     <nav class="home-link">
         <ul>
             <li><a th:href="'/home'"><h2>Home</h2></a></li>
             <li><a th:href="'/genre/2'"><h2>Comedy</h2></a></li>
             <li><a th:href="'/genre/1'"><h2>Horror</h2></a></li>
             <li><a th:href="'/genre/1'"><h2>Hashtags</h2></a></li>
+
         </ul>
     </nav>
 </header>
-<main class="container">
-    <h2>Genres:</h2>
-    <ul class="GenreTitles">
-        <figure th:each="genre:${genres}" class="genre">
-             <a th:href="'genre/'+ ${genre.id}" class="genre-links">
-                <img th:src="${genre.imageUrl}">
-             </a>
+<main class="genrecontainer">
+    <ul class="tvshow-titles">
+        <li th:each="hashtag : ${hashtags.name}" class="genre-reviews">
             <strong>
-                <p th:text="${genre.name}"></p>
+                <p th:text="${hashtags.getTvShowReviews()}"></p>
             </strong>
-        </figure>
+
+        </li>
+
     </ul>
 </main>
 </body>

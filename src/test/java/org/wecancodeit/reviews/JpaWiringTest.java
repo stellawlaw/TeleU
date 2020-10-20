@@ -54,11 +54,11 @@ public class JpaWiringTest {
         TvShowReviews testTvShowReviews2 = new TvShowReviews(testGenre, "Review 2", "cd", "cc", "cg", "ct", "cb");
         tvShowReviewsRepo.save(testTvShowReviews2);
 
-        Hashtags testHashtag1 = new Hashtags("boring", testTvShowReviews1, testTvShowReviews2);
-        Hashtags testHashtag2 = new Hashtags("awesome", testTvShowReviews1, testTvShowReviews2);
-        Hashtags testHashtag3 = new Hashtags("cool");
-        Hashtags testHashtag4 = new Hashtags("not cool", testTvShowReviews1);
-        Hashtags testHashtag5 = new Hashtags("eh...", testTvShowReviews2);
+        Hashtags testHashtag1 = new Hashtags("boring", "ah", testTvShowReviews1, testTvShowReviews2);
+        Hashtags testHashtag2 = new Hashtags("awesome", "ah", testTvShowReviews1, testTvShowReviews2);
+        Hashtags testHashtag3 = new Hashtags("cool", "ah");
+        Hashtags testHashtag4 = new Hashtags("not cool", "ah", testTvShowReviews1);
+        Hashtags testHashtag5 = new Hashtags("eh...", "ah", testTvShowReviews2);
 
         hashtagsRepo.save(testHashtag1);
         hashtagsRepo.save(testHashtag2);

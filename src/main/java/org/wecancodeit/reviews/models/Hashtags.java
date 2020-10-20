@@ -13,13 +13,15 @@ public class Hashtags {
     @GeneratedValue
     private long id;
     private String name;
+    private String imageUrl;
     @ManyToMany
     private Collection<TvShowReviews> tvShowReviews;
     protected Hashtags(){}
 
-    public Hashtags(String name, TvShowReviews... tvShowReviews){
+    public Hashtags(String name, String imageUrl, TvShowReviews... tvShowReviews){
 
         this.name = name;
+        this.imageUrl = imageUrl;
         this.tvShowReviews = new ArrayList<>(List.of(tvShowReviews));
     }
 
@@ -33,6 +35,10 @@ public class Hashtags {
 
     public Collection<TvShowReviews> getTvShowReviews() {
         return tvShowReviews;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 
     @Override

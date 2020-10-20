@@ -114,3 +114,9 @@ ul {
 .review-title h1{
     text-decoration: underline;
 }
+.hashtag-page{
+    background-image: url(/Images/tv-series.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
