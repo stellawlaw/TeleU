@@ -1,9 +1,7 @@
 package org.wecancodeit.reviews.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class TvShowReviews {
@@ -19,6 +17,8 @@ public class TvShowReviews {
     private String descriptionOfShow;
     private String review;
     private String imageReviewUrl;
+    @ManyToMany(mappedBy = "tvShowReviews")
+    private Collection<Hashtags> hashtags;
 
     protected TvShowReviews() {
     }
@@ -63,6 +63,10 @@ public class TvShowReviews {
 
     public String getImageReviewUrl() {
         return imageReviewUrl;
+    }
+
+    public Collection<Hashtags> getHashtags() {
+        return hashtags;
     }
 
     @Override

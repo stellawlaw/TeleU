@@ -2,6 +2,8 @@ package org.wecancodeit.reviews;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.wecancodeit.reviews.Storage.GenreStorage;
+import org.wecancodeit.reviews.Storage.TvShowReviewsStorage;
 import org.wecancodeit.reviews.models.Genre;
 import org.wecancodeit.reviews.models.TvShowReviews;
 
@@ -15,6 +17,7 @@ public class Populator implements CommandLineRunner {
         this.genreStorage = genreStorage;
         this.tvShowReviewsStorage = tvShowReviewsStorage;
     }
+
     @Override
     public void run(String... args) throws Exception {
 
