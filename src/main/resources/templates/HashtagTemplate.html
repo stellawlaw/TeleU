@@ -25,9 +25,9 @@
 </header>
 <main class="genrecontainer">
     <ul class="TvShowcontainer">
-        <li th:each="hashtag : ${hashtags.name}" class="genre-reviews">
+        <li th:each="review : ${hashtags.tvShowReviews}" class="genre-reviews">
             <strong>
-                <p th:text="${hashtags.getTvShowReviews()}"></p>
+                <p th:text="${review.title}"></p>
             </strong>
 
         </li>
