@@ -19,16 +19,24 @@ public class TvShowReviewsController {
         this.hashtagsStorage = hashtagsStorage;
     }
 
-    @GetMapping("{genre}/reviews/{id}")
-    public String showOneReview(Model model, @PathVariable long id, @PathVariable String genre) {
+    @GetMapping("genre/reviews/{id}")
+    public String showOneReview(Model model, @PathVariable long id) {
         model.addAttribute("TvShowReviews", tvShowReviewsStorage.retrieveOneReviewById(id));
         return "TvShowsReviews-template";
     }
-    @PostMapping ("{genre}/hashtags/{id}")
-    public String addHashtag(@RequestParam String hashtagName, @PathVariable String id,@PathVariable String genre){
-        Hashtags hashtagsToAdd = new Hashtags(hashtagName);
+    @PostMapping ("genre/hashtags/{id}")
+    public String addHashtag(@RequestParam String hashtagName, @PathVariable long id){
+        Hashtags hashtagsToAdd = new Hashtags(hashtagName,"",tvShowReviewsStorage.retrieveOneReviewById(id));
         hashtagsStorage.addHashtag(hashtagsToAdd);
-        return "redirect:/";
+        return "redirect:/genre/reviews/" + id;
+        /*
+        1. A way to find hashtags by name.
+        2. if hashtag exists use that hashtag.
+          - if hashtag exists you need to add review to existing hashtag object.
+          -  resave in hashtag storagae
+         3. Explore changing Collections of HashTag/Reviews to Sets.
+
+         */
     }
 
 }

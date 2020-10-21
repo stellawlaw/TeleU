@@ -48,7 +48,7 @@
                 <a th:href="'/hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
             </li>
         </ul>
-        <form th:action="'/genre/reviews/'+${TvShowReviews.id}" method="post">
+        <form th:action="'/genre/hashtags/'+${TvShowReviews.id}" method="post">
             <input type="text" name="hashtagName">
             <button type="submit"> Submit New Hashtag </button>
         </form>
