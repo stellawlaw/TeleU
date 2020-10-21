@@ -41,8 +41,14 @@ a{
 }
 .container ul{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
+
+.genre-links img{
+    max-height: 250px;
+    max-width: 350px;
+}
+
 .container h1{
     display: flex;
     justify-content: center;   
@@ -53,10 +59,16 @@ a{
 }
 .genrecontainer .tvshow-titles{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-left: 100px;
     padding: 0px;
 }
+
+.genre-reviews-link img{
+    max-height: 375px;
+    max-width: 300px;
+}
+
 .movie-titles img{
     display: flex;
     justify-content: center;
@@ -64,7 +76,6 @@ a{
 .home-link ul {
     display: flex;
     justify-content: flex-end;
-    justify-content: row;
     border-radius: 15px;
 }
 .home-link li{
@@ -77,8 +88,12 @@ a{
     margin-top: 10px;
     margin-bottom: 40px;
 }
-.review-title{
+.review-title {
     display: grid;
     grid-template-columns: 50% 50%;
     margin-bottom: 100px;
 }
+
+
+
+

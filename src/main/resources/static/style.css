@@ -50,13 +50,13 @@ img{
 .container{
     color: var(--fourth-color);
     background-color:  #8d99ae98;
-    height: 100vh;
+    height: 120vh;
     max-width: auto;
     border-radius: 25px;
 }
 .genrecontainer{
     color: var(--fourth-color);
-    height: 100vh;
+    height: 120vh;
     max-width: auto;
     border-radius: 25px;
 }

@@ -19,4 +19,10 @@ public class HashtagsController {
         model.addAttribute("hashtags",hashtagsStorage.retrieveOneHashtagById(id));
         return "HashtagTemplate";
     }
+
+//    @RequestMapping("{reviews}hashtags/{id}")
+//    public String showAllHashtags(Model model, @PathVariable long id, @PathVariable String reviews){
+//        model.addAttribute("allhashtags", hashtagsStorage.retrieveAllHashtags());
+//        return "AllHashtagTemplate";
+//    }
 }
