@@ -27,7 +27,7 @@
     <ul class="TvShowcontainer">
         <li th:each="review : ${hashtags.tvShowReviews}" class="genre-reviews">
             <strong>
-                <a th:href="'reviews/'+${review.id}" th:text="${review.title}"></a>
+                <a th:href="'/genre/reviews/'+${review.id}" th:text="${review.title}"></a>
             </strong>
         </li>
     </ul>
