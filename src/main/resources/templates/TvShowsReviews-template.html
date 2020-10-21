@@ -18,7 +18,7 @@
             <li><a th:href="'/home'"><h2>Home</h2></a></li>
             <li><a th:href="'/genre/2'"><h2>Comedy</h2></a></li>
             <li><a th:href="'/genre/1'"><h2>Horror</h2></a></li>
-            <li><a th:href="'/hashtags/7'"><h2>Hashtags</h2></a></li>
+            <li><a th:href="'/hashtags/'"><h2>Hashtags</h2></a></li>
         </ul>
     </nav>
 </header>
@@ -36,7 +36,7 @@
     <p th:text="${TvShowReviews.review}" class="Review">Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Voluptas omnis ipsam vel voluptatem sapiente vero excepturi ipsum deserunt voluptate exercitationem,
         obcaecati illum ipsa dignissimos quas consequatur aliquam eligendi cupiditate commodi.</p>
-        <form action="/hashtags/" method="POST">
+        <form action="/hashtags" method="POST">
             <input type="text" name="reviewName">
             <button type="submit"> Submit Review </button>
         </form>
@@ -48,7 +48,7 @@
                 <a th:href="'/hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
             </li>
         </ul>
-        <form action="/hashtags/" method="POST">
+        <form th:action="'/genre/reviews/'+${TvShowReviews.id}" method="post">
             <input type="text" name="hashtagName">
             <button type="submit"> Submit New Hashtag </button>
         </form>

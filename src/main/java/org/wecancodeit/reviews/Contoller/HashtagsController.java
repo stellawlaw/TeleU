@@ -9,23 +9,23 @@ import org.wecancodeit.reviews.Storage.TvShowReviewsStorage;
 
 @Controller
 public class HashtagsController {
-    private TvShowReviewsStorage tvShowReviewsStorage;
     private HashtagsStorage hashtagsStorage;
-//    private HashtagHomeController hashtagHomeController;
 
-    public HashtagsController(HashtagsStorage hashtagsStorage){
+    public HashtagsController(HashtagsStorage hashtagsStorage) {
         this.hashtagsStorage = hashtagsStorage;
     }
+
+    @RequestMapping("hashtags/")
+    public String showAllReviews(Model model) {
+        model.addAttribute("allHashtags", hashtagsStorage.retrieveAllHashtags());
+        return "AllHashtagsTemplate";
+    }
+
     @RequestMapping("hashtags/{id}")
     public String showOneHashtag(Model model, @PathVariable long id) {
-        model.addAttribute("hashtags",hashtagsStorage.retrieveOneHashtagById(id));
+        model.addAttribute("hashtags", hashtagsStorage.retrieveOneHashtagById(id));
         return "HashtagTemplate";
     }
 
 
-    @RequestMapping("{reviews}hashtags/{id}")
-    public String showAllReviews(Model model, @PathVariable long id, @PathVariable String reviews){
-        model.addAttribute("allReviews", tvShowReviewsStorage.retrieveOneReviewById(id));
-        return "HashtagTemplate";
-    }
 }

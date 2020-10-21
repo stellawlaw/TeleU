@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="hashtag-page"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashtags</title>
+    <link rel = "stylesheet" href="/style.css">
+    <link rel = "stylesheet" href="/layout.css">
 </head>
+
 <body>
-$END$
+<header class="review-title">
+    <h1>Hashtags</h1>
+    <nav class="home-link">
+        <ul>
+            <li><a th:href="'/home'"><h2>Home</h2></a></li>
+            <li><a th:href="'/genre/2'"><h2>Comedy</h2></a></li>
+            <li><a th:href="'/genre/1'"><h2>Horror</h2></a></li>
+            <li><a th:href="'/hashtags/'"><h2>Hashtags</h2></a></li>
+
+        </ul>
+    </nav>
+</header>
+<main class="genrecontainer">
+    <ul class="TvShowcontainer">
+        <li th:each="hashtag : ${allHashtags}" class="genre-reviews">
+            <strong>
+                <a th:href="'/hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
+            </strong>
+        </li>
+    </ul>
+</main>
 </body>
 </html>

@@ -18,7 +18,7 @@
             <li><a th:href="'/home'"><h2>Home</h2></a></li>
             <li><a th:href="'/genre/2'"><h2>Comedy</h2></a></li>
             <li><a th:href="'/genre/1'"><h2>Horror</h2></a></li>
-            <li><a th:href="'/hashtags/7'"><h2>Hashtags</h2></a></li>
+            <li><a th:href="'/hashtags/'"><h2>Hashtags</h2></a></li>
 
         </ul>
     </nav>
@@ -27,11 +27,9 @@
     <ul class="TvShowcontainer">
         <li th:each="review : ${hashtags.tvShowReviews}" class="genre-reviews">
             <strong>
-                <p th:text="${review.title}"></p>
+                <a th:href="'reviews/'+${review.id}" th:text="${review.title}"></a>
             </strong>
-
         </li>
-
     </ul>
 </main>
 </body>
