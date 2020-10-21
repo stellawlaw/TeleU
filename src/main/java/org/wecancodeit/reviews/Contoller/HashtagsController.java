@@ -5,11 +5,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.reviews.Storage.HashtagsStorage;
+import org.wecancodeit.reviews.Storage.TvShowReviewsStorage;
 
 @Controller
 public class HashtagsController {
-
+    private TvShowReviewsStorage tvShowReviewsStorage;
     private HashtagsStorage hashtagsStorage;
+//    private HashtagHomeController hashtagHomeController;
 
     public HashtagsController(HashtagsStorage hashtagsStorage){
         this.hashtagsStorage = hashtagsStorage;
@@ -20,9 +22,10 @@ public class HashtagsController {
         return "HashtagTemplate";
     }
 
-//    @RequestMapping("{reviews}hashtags/{id}")
-//    public String showAllHashtags(Model model, @PathVariable long id, @PathVariable String reviews){
-//        model.addAttribute("allhashtags", hashtagsStorage.retrieveAllHashtags());
-//        return "AllHashtagTemplate";
-//    }
+
+    @RequestMapping("{reviews}hashtags/{id}")
+    public String showAllReviews(Model model, @PathVariable long id, @PathVariable String reviews){
+        model.addAttribute("allReviews", tvShowReviewsStorage.retrieveOneReviewById(id));
+        return "HashtagTemplate";
+    }
 }
