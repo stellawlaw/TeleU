@@ -13,7 +13,7 @@ public class TvShowReviewsController {
 
     private TvShowReviewsStorage tvShowReviewsStorage;
     private HashtagsStorage hashtagsStorage;
-    private GenreStorage genreStorage;
+
     public TvShowReviewsController(TvShowReviewsStorage tvShowReviewsStorage, HashtagsStorage hashtagsStorage) {
         this.tvShowReviewsStorage = tvShowReviewsStorage;
         this.hashtagsStorage = hashtagsStorage;
@@ -24,19 +24,17 @@ public class TvShowReviewsController {
         model.addAttribute("TvShowReviews", tvShowReviewsStorage.retrieveOneReviewById(id));
         return "TvShowsReviews-template";
     }
-    @PostMapping ("genre/hashtags/{id}")
-    public String addHashtag(@RequestParam String hashtagName, @PathVariable long id){
-        Hashtags hashtagsToAdd = new Hashtags(hashtagName,"",tvShowReviewsStorage.retrieveOneReviewById(id));
+
+    @PostMapping("genre/hashtags/{id}")
+    public String addHashtag(@RequestParam String hashtagName, @PathVariable long id) {
+        Hashtags hashtagsToAdd = hashtagsStorage.retrieveOneHashtagByName(hashtagName);
+        if (hashtagsToAdd == null) {
+            hashtagsToAdd = new Hashtags(hashtagName, "", tvShowReviewsStorage.retrieveOneReviewById(id));
+        } else {
+            hashtagsToAdd.addReview(tvShowReviewsStorage.retrieveOneReviewById(id));
+        }
         hashtagsStorage.addHashtag(hashtagsToAdd);
         return "redirect:/genre/reviews/" + id;
-        /*
-        1. A way to find hashtags by name.
-        2. if hashtag exists use that hashtag.
-          - if hashtag exists you need to add review to existing hashtag object.
-          -  resave in hashtag storagae
-         3. Explore changing Collections of HashTag/Reviews to Sets.
-
-         */
     }
 
 }

@@ -2,6 +2,7 @@ package org.wecancodeit.reviews.models;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.Set;
 
 @Entity
 public class TvShowReviews {
@@ -18,7 +19,7 @@ public class TvShowReviews {
     private String review;
     private String imageReviewUrl;
     @ManyToMany(mappedBy = "tvShowReviews")
-    private Collection<Hashtags> hashtags;
+    private Set<Hashtags> hashtags;
 
     protected TvShowReviews() {
     }
@@ -65,7 +66,7 @@ public class TvShowReviews {
         return imageReviewUrl;
     }
 
-    public Collection<Hashtags> getHashtags() {
+    public Set<Hashtags> getHashtags() {
         return hashtags;
     }
 

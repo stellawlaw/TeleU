@@ -8,9 +8,11 @@ import org.wecancodeit.reviews.models.TvShowReviews;
 @Service
 public class HashtagsStorage {
     private HashtagsRepository hashtagsRepo;
+
     public HashtagsStorage(HashtagsRepository hashtagsRepo) {
         this.hashtagsRepo = hashtagsRepo;
     }
+
     public void addHashtag(Hashtags oneHashtagToAdd) {
         hashtagsRepo.save(oneHashtagToAdd);
     }
@@ -21,5 +23,9 @@ public class HashtagsStorage {
 
     public Hashtags retrieveOneHashtagById(Long id) {
         return hashtagsRepo.findById(id).get();
+    }
+
+    public Hashtags retrieveOneHashtagByName(String name) {
+        return hashtagsRepo.findByName(name);
     }
 }

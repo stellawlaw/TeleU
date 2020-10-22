@@ -29,9 +29,9 @@
         </div>
     </div>
 </header>
-<main class="genrecontainer">
-    <ul class="TvShowcontainer">
-        <li th:each="hashtag : ${allHashtags}" class="genre-reviews">
+<main class="TvShowcontainer">
+    <ul class="hashtags-list">
+        <li th:each="hashtag : ${allHashtags}" class="hashtags-hashtag">
             <strong>
                 <a th:href="'/hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
             </strong>
