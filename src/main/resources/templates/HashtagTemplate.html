@@ -30,7 +30,7 @@
     </div>
 </header>
 <main class="TvShowcontainer">
-    <ul class="hashtags-list">
+    <ul class="one-hashtag-list">
         <li th:each="review : ${hashtags.tvShowReviews}" class="hashtags-hashtag">
             <strong>
                 <a th:href="'/genre/reviews/'+${review.id}" th:text="${review.title}"></a>

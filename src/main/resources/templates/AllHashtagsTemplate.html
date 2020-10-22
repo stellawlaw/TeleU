@@ -30,13 +30,14 @@
     </div>
 </header>
 <main class="TvShowcontainer">
+    <section class="all-hashtag-list">
     <ul class="hashtags-list">
         <li th:each="hashtag : ${allHashtags}" class="hashtags-hashtag">
             <strong>
                 <a th:href="'/hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
             </strong>
         </li>
-    </ul>
+    </ul></section>
 </main>
 </body>
 </html>
