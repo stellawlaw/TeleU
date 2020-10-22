@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="tvshow-page" th:style ="'background:url(' + ${TvShowReviews.imageReviewUrl} + ');'"
+<html class="tv-show-page" th:style ="'background:url(' + ${TvShowReviews.imageReviewUrl} + ');'"
         xmlns="http://www.w3.org/1999/xhtml"
        xmlns:th="http://www.thymeleaf.org">
 
@@ -13,18 +13,26 @@
 <body>
 <header class="review-title">
     <h1 th:text="${TvShowReviews.title}" ></h1>
-    <nav class="home-link">
-        <ul>
-            <li><a th:href="'/home'"><h2>Home</h2></a></li>
-            <li><a th:href="'/genre/2'"><h2>Comedy</h2></a></li>
-            <li><a th:href="'/genre/1'"><h2>Horror</h2></a></li>
-            <li><a th:href="'/hashtags/'"><h2>Hashtags</h2></a></li>
-        </ul>
-    </nav>
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+
+            <a th:href="'/home'"><h3>Home</h3></a>
+            <a th:href="'/genre/2'"><h3>Comedy</h3></a>
+            <a th:href="'/genre/1'"><h3>Horror</h3></a>
+            <a th:href="'/genre/3'"><h3>Drama</h3></a>
+            <a th:href="'/genre/4'"><h3>Action & Adventure</h3></a>
+            <a th:href="'/genre/5'"><h3>Animation</h3></a>
+            <a th:href="'/genre/6'"><h3>Documentary</h3></a>
+            <a th:href="'/hashtags/'"><h3>Hashtags</h3></a>
+
+        </div>
+    </div>
 </header>
 <main class="TvShowcontainer">
     <h1 th:each="review:${TvShowReviews}" class="title"></h1>
-    <h2 >Show date</h2>
+<div class="review-start">
+    <h2 class="review-show-date">Show date</h2>
     <p th:text="${TvShowReviews.showDate}" class="Show-date">July 15, 2016</p>
     <h2 >Number of seasons</h2>
     <p th:text="${TvShowReviews.numberOfSeasons}" class="Number-of-seasons">3 seasons- current</p>
@@ -36,15 +44,16 @@
     <p th:text="${TvShowReviews.review}" class="Review">Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Voluptas omnis ipsam vel voluptatem sapiente vero excepturi ipsum deserunt voluptate exercitationem,
         obcaecati illum ipsa dignissimos quas consequatur aliquam eligendi cupiditate commodi.</p>
+    </div>
         <section class="hashtag">
-        <h2 class="hashtags__header">Hashtags:</h2>
+        <h2 class="hashtags__header">Hashtags</h2>
         <ul class="hashtags-list" > 
 
             <li th:each="hashtag:${TvShowReviews.hashtags}" class="hashtags-hashtag">
                 <a th:href="'/hashtags/'+${hashtag.id}" th:text="${hashtag.name}"></a>
             </li>
         </ul>
-        <form th:action="'/genre/hashtags/'+${TvShowReviews.id}" method="post">
+        <form th:action="'/genre/hashtags/'+${TvShowReviews.id}" method="post" class="hashtag-form">
             <input type="text" name="hashtagName">
             <button type="submit"> Submit New Hashtag </button>
         </form>

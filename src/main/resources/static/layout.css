@@ -26,6 +26,11 @@
     height: 360px;
     width: 500px;
 }
+.review-start{
+    padding-top: 50px;
+    padding-left: 600px;
+    padding-right: 600px;
+}
 
 h2{
     margin-top: 20px;
@@ -73,14 +78,7 @@ a{
     display: flex;
     justify-content: center;
 }
-.home-link ul {
-    display: flex;
-    justify-content: flex-end;
-    border-radius: 15px;
-}
-.home-link li{
-    padding: 10px;
-}
+
 .review-title h1{
     display:flex;
     justify-content: left;
@@ -93,6 +91,67 @@ a{
     grid-template-columns: 50% 50%;
     margin-bottom: 100px;
 }
+.dropbtn {
+    background-color: #D90429;
+    color: white;
+    padding: 8px;
+    font-size: 30px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0a0a0a7e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    text-decoration: none;
+    color: white;
+    padding: 6px 8px;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    /* background-color: #3e8e41; */
+    background-color: #8a071d8c;
+}
+
+.hashtags-hashtag {
+    display: flex;
+    justify-content: center;
+}
+
+.hashtags-hashtag a{
+    margin: 0px;
+    padding: 0px;
+}
+
+.hashtag-form{
+    margin-top: 50px;
+}
+
+
+
 
 
 

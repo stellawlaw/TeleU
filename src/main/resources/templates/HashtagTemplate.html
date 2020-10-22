@@ -13,19 +13,25 @@
 <body>
 <header class="review-title">
     <h1 th:text="${hashtags.name}">Hashtags</h1>
-    <nav class="home-link">
-        <ul>
-            <li><a th:href="'/home'"><h2>Home</h2></a></li>
-            <li><a th:href="'/genre/2'"><h2>Comedy</h2></a></li>
-            <li><a th:href="'/genre/1'"><h2>Horror</h2></a></li>
-            <li><a th:href="'/hashtags/'"><h2>Hashtags</h2></a></li>
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
 
-        </ul>
-    </nav>
+            <a th:href="'/home'"><h3>Home</h3></a>
+            <a th:href="'/genre/2'"><h3>Comedy</h3></a>
+            <a th:href="'/genre/1'"><h3>Horror</h3></a>
+            <a th:href="'/genre/3'"><h3>Drama</h3></a>
+            <a th:href="'/genre/4'"><h3>Action & Adventure</h3></a>
+            <a th:href="'/genre/5'"><h3>Animation</h3></a>
+            <a th:href="'/genre/6'"><h3>Documentary</h3></a>
+            <a th:href="'/hashtags/'"><h3>Hashtags</h3></a>
+
+        </div>
+    </div>
 </header>
-<main class="genrecontainer">
-    <ul class="TvShowcontainer">
-        <li th:each="review : ${hashtags.tvShowReviews}" class="genre-reviews">
+<main class="TvShowcontainer">
+    <ul class="hashtags-list">
+        <li th:each="review : ${hashtags.tvShowReviews}" class="hashtags-hashtag">
             <strong>
                 <a th:href="'/genre/reviews/'+${review.id}" th:text="${review.title}"></a>
             </strong>
